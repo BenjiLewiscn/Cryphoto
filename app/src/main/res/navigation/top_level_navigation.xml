@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/top_level_navigation"
+    app:startDestination="@id/initialPage">
+    <fragment
+        android:id="@+id/initialPage"
+        android:name="com.benlau.cryphoto.InitialPage"
+        android:label="fragment_initial_page"
+        tools:layout="@layout/fragment_initial_page">
+        <action
+            android:id="@+id/action_initialPage_to_encodePreparation"
+            app:destination="@id/encodePreparation" />
+        <action
+            android:id="@+id/action_initialPage_to_decodePreparation"
+            app:destination="@id/decodePreparation" />
+    </fragment>
+    <fragment
+        android:id="@+id/encodePreparation"
+        android:name="com.benlau.cryphoto.EncodePreparation"
+        android:label="fragment_encode_preparation"
+        tools:layout="@layout/fragment_encode_preparation" >
+        <action
+            android:id="@+id/action_encodePreparation_to_encodeResult"
+            app:destination="@id/encodeResult" />
+    </fragment>
+    <fragment
+        android:id="@+id/encodeResult"
+        android:name="com.benlau.cryphoto.EncodeResult"
+        android:label="fragment_encode_result"
+        tools:layout="@layout/fragment_encode_result" >
+        <action
+            android:id="@+id/action_encodeResult_to_initialPage"
+            app:destination="@id/initialPage" />
+    </fragment>
+    <fragment
+        android:id="@+id/decodePreparation"
+        android:name="com.benlau.cryphoto.DecodePreparation"
+        android:label="fragment_decode_preparation"
+        tools:layout="@layout/fragment_decode_preparation" >
+        <action
+            android:id="@+id/action_decodePreparation_to_decodeResult"
+            app:destination="@id/decodeResult" />
+    </fragment>
+    <fragment
+        android:id="@+id/decodeResult"
+        android:name="com.benlau.cryphoto.DecodeResult"
+        android:label="fragment_decode_result"
+        tools:layout="@layout/fragment_decode_result" >
+        <action
+            android:id="@+id/action_decodeResult_to_initialPage"
+            app:destination="@id/initialPage" />
+    </fragment>
+</navigation>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DecodePreparation"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/buttonSelectDecode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/select_decode" />
+
+    <ImageView
+        android:id="@+id/selectedDecode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/app_name" />
+
+    <Button
+        android:id="@+id/buttonStartDecode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/start_decoding" />
+
+</LinearLayout>
